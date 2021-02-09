@@ -1,5 +1,5 @@
 import React from 'react';
-import api from '../utils/Api';
+import api from '../utils/api';
 import Card from './Card';
 
 function Main({onEditAvatar, onEditProfile, onAddPlace, onCardClick, onCardDelete}) {
@@ -41,9 +41,9 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, onCardClick, onCardDelet
         onClick={onAddPlace}></button>
       </section>
       <section className="cards content__cards">
-        {cards.map((card, i) => (
+        {cards.map((card, card_id) => (
           <Card
-            key={i}
+            key={card_id}
             card={card}
             onCardClick={onCardClick}
             onCardDelete={onCardDelete} 
